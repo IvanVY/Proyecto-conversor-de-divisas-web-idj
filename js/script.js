@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para obtener tasas de la API
     async function fetchConversionRate(from, to, amount) {
-        const apiKey = process.env.API_KEY;
+        
+        const apiKey = import.meta.env.VITE_API_KEY;
         const url = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${from}/${to}/${amount}`;
 
         const response = await fetch(url);
