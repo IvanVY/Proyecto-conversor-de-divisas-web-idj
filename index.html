@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDJ Exchange | Conversor de Divisas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/icons/currency-exchange.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <img src="assets/icons/currency-exchange.svg" alt="Ícono conversor" class="app-icon">
+            <h1>IDJ Exchange</h1>
+            <p class="app-subtitle">Conversor de divisas en tiempo real</p>
+        </header>
+
+        <main class="converter-container">
+            <div class="converter-card">
+                <div class="currency-selector">
+                    <div class="input-group">
+                        <label for="amount">Cantidad</label>
+                        <input type="number" id="amount" min="0" step="0.01" placeholder="0.00">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="from-currency">De</label>
+                        <div class="select-wrapper">
+                            <select id="from-currency">
+                                <option value="USD">USD - Dólar Estadounidense</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="GBP">GBP - Libra Esterlina</option>
+                                <option value="JPY">JPY - Yen Japonés</option>
+                                <option value="ARS">ARS - Peso Argentino</option>
+                                <option value="BRL">BRL - Real Brasileño</option>
+                                <option value="COP">COP - Peso Colombiano</option>
+                                <option value="MXN">MXN - Peso Mexicano</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="swap-currencies" class="swap-btn" aria-label="Intercambiar divisas">
+                        <img src="assets/icons/swap.svg" alt="Intercambiar">
+                    </button>
+
+                    <div class="input-group">
+                        <label for="to-currency">A</label>
+                        <div class="select-wrapper">
+                            <select id="to-currency">
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="USD">USD - Dólar Estadounidense</option>
+                                <option value="GBP">GBP - Libra Esterlina</option>
+                                <option value="JPY">JPY - Yen Japonés</option>
+                                <option value="ARS">ARS - Peso Argentino</option>
+                                <option value="BRL">BRL - Real Brasileño</option>
+                                <option value="COP">COP - Peso Colombiano</option>
+                                <option value="MXN">MXN - Peso Mexicano</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="convert" class="convert-btn">
+                    <span>Convertir</span>
+                </button>
+
+                <div class="result-container" id="result">
+                    <div class="conversion-result" id="conversion-result"></div>
+                    <div class="rate-info" id="rate-info"></div>
+                    <div class="last-update" id="last-update"></div>
+                </div>
+
+                <div class="error-message" id="error"></div>
+            </div>
+
+            <div class="disclaimer">
+                <p>Las tasas de cambio se actualizan automáticamente. Este conversor utiliza datos de ExchangeRate-API.</p>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2023 Conversor FX | Desarrollado para fines educativos</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

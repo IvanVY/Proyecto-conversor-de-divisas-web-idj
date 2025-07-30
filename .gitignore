@@ -1,0 +1,4 @@
+# Archivos a ignorar
+.env
+node_modules/
+*.env.local
